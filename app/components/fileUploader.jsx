@@ -69,6 +69,11 @@ const FileUploader = () => {
     return cleanedPostalCode;
   };
 
+  const cleanedId = (id) => {
+    const textoSinHashtag = id.replace(/#\w+/g, "");
+    return textoSinHashtag;
+  };
+
   const removeAccentsAndSpecialChars = (str) => {
     return str
       .normalize("NFD") // Normalizar para separar caracteres diacríticos
@@ -118,6 +123,8 @@ const FileUploader = () => {
           item["Shipping Name"]
         );
 
+        const id = cleanedId(item["Name"]);
+
         const match = shippingAddress.match(/^(.*?)(\d+)$/);
 
         let street = shippingAddress;
@@ -135,7 +142,7 @@ const FileUploader = () => {
         const pesaje = await weightHeight(item);
 
         return {
-          external_id: item["Name"],
+          external_id: id,
           origin_id: 5120,
           destinatario: shippingName,
           telefono: cleanedPhoneNumber,
