@@ -1,0 +1,132 @@
+{
+  "products": [
+    {
+      "name": "GUIRNALDA NAVIDEÑA LED SOLAR",
+      "alto": 12,
+      "ancho": 6,
+      "largo": 8,
+      "peso": 0.2,
+      "valor": 6000
+    },
+    {
+      "name": "KIT LIMPIEZA PERLA 360™",
+      "alto": 38,
+      "ancho": 23,
+      "largo": 20,
+      "peso": 1.1,
+      "valor": 10000
+    },
+    {
+      "name": "MOPA AUTOESCURRIBLE PREMIUM™",
+      "alto": 38,
+      "ancho": 23,
+      "largo": 20,
+      "peso": 0.6,
+      "valor": 11400
+    },
+    {
+      "name": "PIZARRA MÁGICA PERLA ™",
+      "alto": 15,
+      "ancho": 1,
+      "largo": 23,
+      "peso": 0.1,
+      "valor": 4000
+    },
+    {
+      "name": "MAGNETIC CLEANER PERLA™- TUS VIDRIOS LIMPIOS",
+      "alto": 7,
+      "ancho": 7,
+      "largo": 13,
+      "peso": 0.5,
+      "valor": 4000
+    },
+    {
+      "name": "MOP PRO PERLA™",
+      "alto": 26,
+      "ancho": 5,
+      "largo": 5,
+      "peso": 0.2,
+      "valor": 4000
+    },
+    {
+      "name": "COMBO LIMPIEZA PERLA 4 EN 1",
+      "alto": 39,
+      "ancho": 20,
+      "largo": 30,
+      "peso": 2.2,
+      "valor": 4000
+    },
+    {
+      "name": "SACACORCHOS AUTOMATICO PREMIUM",
+      "alto": 24,
+      "ancho": 6,
+      "largo": 6,
+      "peso": 0.2,
+      "valor": 10000
+    },
+    {
+      "name": "MINI DRONE 4K",
+      "alto": 6,
+      "ancho": 16,
+      "largo": 21,
+      "peso": 0.3,
+      "valor": 27000
+    },
+    {
+      "name": "LAMPARA ANTIMOSQUITOS PERLA™",
+      "alto": 12,
+      "ancho": 12,
+      "largo": 22,
+      "peso": 0.3,
+      "valor": 5000
+    },
+    {
+      "name": "ANTORCHA LED SOLAR (2 Unidades)",
+      "alto": 23,
+      "ancho": 8,
+      "largo": 14,
+      "peso": 0.2,
+      "valor": 5000
+    },
+    {
+      "name": "GUIRNALDA GLOBO PERLA™",
+      "alto": 16,
+      "ancho": 3,
+      "largo": 10,
+      "peso": 0.1,
+      "valor": 5000
+    },
+    {
+      "name": "PILETA DOG SPLASH PERLA™",
+      "alto": 20,
+      "ancho": 5,
+      "largo": 18,
+      "peso": 0.1,
+      "valor": 20000
+    },
+    {
+      "name": "Colchoneta SplashNet",
+      "alto": 1,
+      "ancho": 23,
+      "largo": 29,
+      "peso": 0.1,
+      "valor": 6000
+    },
+    {
+      "name": "Auto 4*4 Sense Master",
+      "alto": 25,
+      "ancho": 8,
+      "largo": 18,
+      "peso": 0.6,
+      "valor": 37000
+    },
+    {
+      "name": "AeroSphere 360°",
+      "alto": 10,
+      "ancho": 10,
+      "largo": 10,
+      "peso": 0.1,
+      "valor": 10000
+    }
+  ]
+}
