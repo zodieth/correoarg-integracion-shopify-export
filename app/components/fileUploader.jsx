@@ -204,9 +204,9 @@ const FileUploader = () => {
         />
 
         <p className="mt-5">
-          Con esto te ahorro 30 min de estar cargando manualmente el excel de
-          Correo Argentino y Shopify, cargá el archivo order_exports y disfrutá
-          pa,{" "}
+          Hermanito no te confundas porque este sistemilla está actualizado para
+          la integración de correo argentino y el mapeo de celdas con shopify,
+          arrastrá el shopify exports y disfrutá,{" "}
           <a className="text-blue-600 hover:underline" href="#" target="_blank">
             Mateo
           </a>
