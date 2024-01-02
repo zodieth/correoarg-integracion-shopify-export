@@ -135,34 +135,23 @@ const FileUploader = () => {
         const pesaje = await weightHeight(item);
 
         return {
-          "tipo_producto(obligatorio)": "CP",
-          "largo(obligatorio en CM)": pesaje?.largo ? pesaje?.largo : "",
-          "ancho(obligatorio en CM)": pesaje?.ancho ? pesaje?.ancho : "",
-          "altura(obligatorio en CM)": pesaje?.alto ? pesaje?.alto : "",
-          "peso(obligatorio en KG)": pesaje?.peso ? pesaje?.peso : "",
-          "valor_del_contenido(obligatorio en pesos argentinos)": pesaje?.valor
-            ? pesaje?.valor
-            : "",
-          "provincia_destino(obligatorio)": item["Shipping Province"],
-          "sucursal_destino(obligatorio solo en caso de no ingresar localidad de destino)":
-            "",
-          "localidad_destino(obligatorio solo en caso de no ingresar sucursal de destino)":
-            shippingCity,
-          "calle_destino(obligatorio solo en caso de no ingresar sucursal de destino)":
-            street,
-          "altura_destino(obligatorio solo en caso de no ingresar sucursal de destino)":
-            height,
-          "piso(opcional solo en caso de no ingresar sucursal de destino)":
-            shippingAddress2,
-          "dpto(opcional solo en caso de no ingresar sucursal de destino)": "",
-          "codpostal_destino(obligatorio solo en caso de no ingresar sucursal de destino)":
-            cleanedCodpostal,
-          "destino_nombre(obligatorio)": shippingName,
-          "destino_email(obligatorio, debe ser un email valido)": item["Email"],
-          "cod_area_tel(opcional)": "",
-          "tel(opcional)": "",
-          "cod_area_cel(obligatorio)": 54,
-          "cel(obligatorio)": cleanedPhoneNumber,
+          external_id: item["Name"],
+          origin_id: 5120,
+          destinatario: shippingName,
+          telefono: cleanedPhoneNumber,
+          email: item["Email"],
+          calle: street,
+          altura: height,
+          observaciones: shippingAddress2,
+          ciudad: shippingCity,
+          provincia: item["Shipping Province"],
+          cp: cleanedCodpostal,
+          gramos: pesaje?.peso ? pesaje?.peso : "",
+          largo: pesaje?.largo ? pesaje?.largo : "",
+          alto: pesaje?.alto ? pesaje?.alto : "",
+          ancho: pesaje?.ancho ? pesaje?.ancho : "",
+          valor_contenido: pesaje?.valor ? pesaje?.valor : "",
+          despacho: "pickup",
         };
       })
     );
