@@ -77,6 +77,11 @@ const FileUploader = () => {
     return textoSinHashtag;
   };
 
+  const cleanBlankSpace = (text) => {
+    const textoSinEspacios = text.replace(/\s/g, "").toLowerCase();
+    return textoSinEspacios;
+  };
+
   const removeAccentsAndSpecialChars = (str) => {
     return str
       .normalize("NFD") // Normalizar para separar caracteres diacríticos
@@ -128,6 +133,8 @@ const FileUploader = () => {
 
         const id = await cleanedId(item["Name"]);
 
+        const vendorCleaned = await cleanBlankSpace(item["Vendor"]);
+
         const match = shippingAddress.match(/^(.*?)(\d+)$/);
 
         let street = shippingAddress;
@@ -145,8 +152,8 @@ const FileUploader = () => {
         const pesaje = await weightHeight(item);
 
         return {
-          external_id: id,
-          origin_id: 5120,
+          external_id: (id + "-" + vendorCleaned).toString(),
+          origin_id: 6613,
           destinatario: shippingName,
           telefono: cleanedPhoneNumber,
           email: item["Email"],
