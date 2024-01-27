@@ -123,7 +123,7 @@ const FileUploader = () => {
           item["Shipping Name"]
         );
 
-        const id = cleanedId(item["Name"]);
+        const id = await cleanedId(item["Name"]);
 
         const match = shippingAddress.match(/^(.*?)(\d+)$/);
 

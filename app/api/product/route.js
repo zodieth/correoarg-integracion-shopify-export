@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import dbConnect from "@/app/utils/dbConnect";
 import fs from "fs";
-import path from "path";
+import products from "../../json/products.json";
 
 import axios from "axios";
 export async function GET() {
@@ -11,13 +11,17 @@ export async function GET() {
 
 export async function POST(req, res) {
   const { name, alto, ancho, largo, peso, valor } = await req.json();
-  console.log(name, alto, ancho, largo, peso, valor);
-  const filePath = path.join(__dirname, "..", "..", "json", "products.json");
+
+  const path = process.cwd() + "/app/json/products.json";
+  // console.log(name, alto, ancho, largo, peso, valor);
+  // const filePath = path.join(__dirname, "..", "..", "json", "products.json");
 
   // Leer el archivo JSON existente
-  const existingData = fs.readFileSync(filePath, "utf-8");
-  const parsedData = JSON.parse(existingData);
+  // const existingData = fs.readFileSync(products, "utf-8");
 
+  // console.log(products);
+  // const parsedData = JSON.parse(products.products);
+  const parsedData = products.products;
   // Crear el nuevo producto
   const newProduct = {
     name,
@@ -29,10 +33,16 @@ export async function POST(req, res) {
   };
 
   // Agregar el nuevo producto a la matriz de productos existentes
-  parsedData.products.push(newProduct);
+  parsedData.push(newProduct);
 
   // Escribir los datos actualizados de vuelta al archivo JSON
-  fs.writeFileSync(filePath, JSON.stringify(parsedData, null, 2));
+  fs.writeFileSync(
+    // __dirname,
+    // process.cwd(),
+    path,
+    // "../../json/products.json",
+    JSON.stringify(parsedData, null, 2)
+  );
 
   return NextResponse.json({ message: "Producto agregado exitosamente" });
 }
