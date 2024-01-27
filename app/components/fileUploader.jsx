@@ -70,7 +70,10 @@ const FileUploader = () => {
   };
 
   const cleanedId = (id) => {
-    const textoSinHashtag = id.replace(/#\w+/g, "");
+    const split = id.split("");
+    split.shift();
+    const textoSinHashtag = split.join("");
+
     return textoSinHashtag;
   };
 
