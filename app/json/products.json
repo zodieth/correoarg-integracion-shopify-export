@@ -127,6 +127,14 @@
       "largo": 10,
       "peso": 100,
       "valor": 10000
+    },
+    {
+      "name": "COLLAR PROYECTOR PERLA™",
+      "alto": 10,
+      "ancho": 1,
+      "largo": 10,
+      "peso": 10,
+      "valor": 2600
     }
   ]
 }
