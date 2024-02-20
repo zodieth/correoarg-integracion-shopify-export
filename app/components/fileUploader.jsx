@@ -247,9 +247,8 @@ const FileUploader = () => {
         />
 
         <p className="mt-5">
-          Hermanito no te confundas porque este sistemilla está actualizado para
-          la integración de correo argentino y el mapeo de celdas con shopify,
-          arrastrá el shopify exports y disfrutá,{" "}
+          Sistema de mapeo de celdas de orders_export.csv de Shopify a la
+          integración de Correo Argentino
           <a className="text-blue-600 hover:underline" href="#" target="_blank">
             Mateo
           </a>
