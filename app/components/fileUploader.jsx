@@ -131,6 +131,10 @@ const FileUploader = () => {
           item["Shipping Name"]
         );
 
+        const isProductInJSON = products.products.some(
+          (product) => product.name === item["Lineitem name"]
+        );
+
         const id = await cleanedId(item["Name"]);
 
         const vendorCleaned = await cleanBlankSpace(item["Vendor"]);
@@ -150,6 +154,28 @@ const FileUploader = () => {
         }
 
         const pesaje = await weightHeight(item);
+
+        if (!isProductInJSON) {
+          return {
+            external_id: (id + "-" + vendorCleaned).toString(),
+            origin_id: 6613,
+            destinatario: "MercadoLibre",
+            telefono: "MercadoLibre",
+            email: "MercadoLibre",
+            calle: "MercadoLibre",
+            altura: "MercadoLibre",
+            observaciones: "MercadoLibre",
+            ciudad: "MercadoLibre",
+            provincia: "MercadoLibre",
+            cp: "MercadoLibre",
+            gramos: "MercadoLibre",
+            largo: "MercadoLibre",
+            alto: "MercadoLibre",
+            ancho: "MercadoLibre",
+            valor_contenido: "MercadoLibre",
+            despacho: "pickup",
+          };
+        }
 
         return {
           external_id: (id + "-" + vendorCleaned).toString(),
